@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Arash Behboodi</title>
+<meta name="generator" content="Bluefish 2.2.2" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/stylesheet.css" type="text/css" media="screen" />
+<script type="text/javascript" src="../js/cufon-yui.js"></script>
+<script type="text/javascript" src="../js/CartoGothic_Std_400-CartoGothic_Std_700-CartoGothic_Std_italic_400-CartoGothic_Std_italic_700.font.js"></script>
+<script type="text/javascript">Cufon.replace('h1')('h2')('h4')('p');</script>
+</head>
+<body>
+<div id="wrapper">
+    <ul id="nav">
+      <li id="first"><a href="../index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publication.html">Publication</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+<div id="content">
+    <div class="box">
+      <h3 class="o">       Information Theoretic aspects of Cooperative Networks</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+   <div class="sidenote left small">
+        <p class="o"></p>
+<img src="../src/coop.png" alt="" width="220px" height="330px" />
+      </div>
+      <div class="right big">
+            <p>Nothing for now...</p>
+      </div>
+      </div>
+      <div class="box">
+      
+          <div class="box">
+      <h3 class="o">       Shannon Theory</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+   <div class="sidenote left small">
+        <p class="o"></p>
+<img src="../src/coop.png" alt="" width="220px" height="330px" />
+      </div>
+      <div class="right big">
+            <p>Nothing for now...</p>
+      </div>
+      </div>
+      
+      
+          <div class="box">
+      <h3 class="o">       Compressive Sensing</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+   <div class="sidenote left small">
+        <p class="o"></p>
+<img src="../src/coop.png" alt="" width="220px" height="330px" />
+      </div>
+      <div class="right big">
+            <p>Nothing for now...</p>
+      </div>
+      </div>
+      
+          <div class="box">
+      <h3 class="o">      Quality-aware Information Systems</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+   <div class="sidenote left small">
+        <p class="o"></p>
+<img src="../src/Queue.png" alt="" width="400px" height="80px" />
+      </div>
+      <div class="right big">
+            <p>Nothing for now...</p>
+      </div>
+      </div>
+      
+      <h3 class="o">   Indoor Localization</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+   <div class="sidenote left small">
+        <p class="o"></p>
+<img src="../src/coop.png" alt="" width="220px" height="330px" />
+      </div>
+      <div class="right big">
+            <p>Nothing for now...</p>
+      </div>
+      </div>
+      
+<!--content"-->
+    </div>
+<!--wrapper--> 
+   </div>
+   <div id="footer">
+    <div class="credits left">Copyright <span class="o">O’No!</span> Typography 2009</div>
+  </div>
+<!--footer-->
+
+</body>
+
+</html>

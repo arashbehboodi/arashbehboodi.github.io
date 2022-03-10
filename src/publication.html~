@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Arash Behboodi</title>
+<meta name="generator" content="Bluefish 2.2.2" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/stylesheet.css" type="text/css" media="screen" />
+<script type="text/javascript" src="../js/cufon-yui.js"></script>
+<script type="text/javascript" src="../js/CartoGothic_Std_400-CartoGothic_Std_700-CartoGothic_Std_italic_400-CartoGothic_Std_italic_700.font.js"></script>
+<script type="text/javascript">Cufon.replace('h1')('h2')('h4')('p');</script>
+</head>
+<body>
+<div id="wrapper">
+    <ul id="nav">
+      <li id="first"><a href="../index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publication.html">Publication</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    
+ <div id="content">
+    <div class="box">
+      <h3 class="o">  Journals</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+
+<p> 2. Arash Behboodi, Pablo Piantanida, “ <a href="http://arxiv.org/abs/1307.0991" > Mixed Noisy Network Coding and Cooperative Unicasting in
+Wireless Networks</a>”, IEEE Transactions on Information Theory, vol.61, no.1, pp.189,222, Jan. 2015 </p>
+<p> 1. Arash Behboodi, Pablo Piantanida, “ <a href="http://arxiv.org/pdf/1103.5133.pdf" >Cooperative Strategies for Simultaneous and Broadcast Relay
+Channels</a>”, IEEE Transactions on Information Theory, vol. 59, no. 3, pp. 1417-1443, March 2013 </p>
+
+      </div>
+
+
+    <div class="box">
+      <h3 class="o">       Conferences</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+ <p> 22. Arash Behboodi, Anas Chaaban, Rudolf Mathar, Mohamed-Slim Alouini, "On Full Duplex Gaussian Relay Channels with Self-Interference ", IEEE International Symposium on Information Theory , ISIT 2012, July 2016, Barcelona, Spain</p>
+ 
+ <p> 21.R. Cornelius, D. Heberling, N. Koep, A. Behboodi, R. Mathar, Compressed Sensing Applied to Spherical Near-field to Far-field Transformation, to appear: Proceedings: 10th European Conference on Antennas and Propagation (EuCAP 2016), Davos, Switzerland, April 2015</p> 
+<p> 20. Filip Lemic, Arash Behboodi, Vlado Handziski, Adam Wolisz, “ Increasing Interference Robustness
+of WiFi Fingerprinting by Leveraging Spectrum Information”, IEEE International Conference on Computer and Information Technology; Ubiquitous Computing and Communications; Dependable, Autonomic and Secure Computing; Pervasive Intelligence and Computing (CIT/IUCC/DASC/PICOM), Liverpool, Oct. 2015 </p> 
+ <p> 19. Hieu Le, Arash Behboodi, Adam Wolisz, "Quality Driven Resource Allocation for Adaptive Video Streaming in OFDMA Uplink ", Proc. IEEE Personal, Indoor and Mobile Radio Communications (PIMRC), pp. 1456 -1461, August 2015</p> 
+<p>18. Niklas Wirström, Arash Behboodi, Filip Lemic, Thiemo Voight, Adam Wolisz, “Localization using
+Anonymous Measurements”, International Conference on Distributed Computing in Sensor Systems (DCOSS 2015)
+,Fortaleza, Brazil June 2015 </p>
+<p>17. Arash Behboodi, Niklas Wirström, Filip Lemic, Thiemo Voight, Adam Wolisz, <a href="papers/VTC2015.pdf" > “Interference Effect
+on Localization Solutions: Signal Feature Perspective”</a>, IEEE 81st Vehicular Technology Conference:
+VTC2015-Spring 11-14 May 2015, Glasgow, Scotland</p>
+<p>16. Arash Behboodi, <a href="papers/ICC2015.pdf" > “Oblivious Lattice Coding for Gaussian Relay Channels”</a>, IEEE International Conference on Communications - ICC 2015, 8-12 June, London</p>
+<p> 15. Filip Lemic, Arash Behboodi, Vlado Handziski, Adam Wolisz, “Towards Systematic Experimental
+Evaluation of Fingerprinting-based Indoor Localization Approaches”, 5th International Conference
+on Indoor Positioning and Indoor Navigation, IPIN 2014, October 17-30 Busan, Korea</p>
+<p>14. Onur Ergin, Vlado Handziski, Arash Behboodi, Adam Wolisz, “Determining Node Sequence in a
+Linear Configuration”, 5th International Conference on Indoor Positioning and Indoor Navigation,
+IPIN 2014,  October 17-30 Busan, Korea</p>
+<p> 13. Hieu Le, Arash Behboodi, Adam Wolisz, “Dynamic Resource Allocation in OFDMA Uplink for MAI
+Mitigation and Throughput Improvement”, IEEE Vehicular Technology Conference 2014- Fall, 14-17
+September 2014, Vancouver, Canada </p>
+<p> 12. Arash Behboodi, et al., “ Evaluation of RF-based Indoor Localization Solutions for the Future
+Internet”, Future Network and Mobile Summit 2013 , 3 - 5 July 2013, Lisbon, Portugal.</p>
+<p> 11. Arash Behboodi, Pablo Piantanida,<a href="papers/2013ISIT.pdf" >  “Mixed Noisy Network Coding”</a>, in Information Theory Pro-
+ceedings (ISIT), 2013 IEEE International Symposium on, pp. 2324-2328, July, 2013</p>
+<p> 10. Arash Behboodi, Pablo Piantanida,<a href="papers/2012ITW.pdf" >  “ On the Asymptotic Spectrum of the Error Probability of
+Composite Networks”</a>, Information Theory Workshop 2012 (ITW). September 3-7, 2012, Lausanne -
+Switzerland (Invited Paper)</p>
+<p> 9. Arash Behboodi, Pablo Piantanida, “Selective Coding Strategy for Unicast Composite Networks”,
+IEEE International Symposium on Information Theory , ISIT 2012, July 2012 Cambridge, MA, USA </p>
+<p> 8. Arash Behboodi, Pablo Piantanida, “Selective Coding Strategy for Composite Relay Channels”, 5th
+International Symposium on Communication, Control, and signal processing, ISCCSP 2012, May
+2012 Rome, Italy (Invited Paper)</p>
+<p>7. Arash Behboodi, Pablo Piantanida, “Cooperative Strategies for Simultaneous Relay Channels”, 23rd
+Symposium on Signal and Image Processing, GRETSI, September 2011 Bordeaux, France </p>
+<p> 6. Arash Behboodi, Pablo Piantanida, On the Asymptotic Error Probability of Composite Relay Chan-
+nel, IEEE International Symposium on Information Theory, ISIT 2011, August 2011 St Petersburg,
+Russia </p>
+<p> 5. Arash Behboodi, Pablo Piantanida, 
+<a href="http://arxiv.org/pdf/1010.3981" >
+Broadcasting over the Relay Channel with Oblivious Cooperative Strategy </a>
+, Forty-Eighth Annual Allerton Conference on Communication, Control, and Comput-
+ing, September 29 - October 1, 2010 Allerton Retreat Center, Monticello, Illinois
+</p>
+<p> 4. Arash Behboodi, Pablo Piantanida, 
+Capacity of a Class of Broadcast Relay Channels</a>, 
+IEEE International Symposium on Information Theory, ISIT 2010, June 13-18, 2010 Austin, Texas
+ </p>
+
+
+
+ <p>3. Arash Behboodi, Pablo Piantanida, “On the Simultaneous Relay Channel with Collocated Relay and
+Destination Nodes”, WNC3 2010, International Workshop on Wireless Networks: Communication,
+Cooperation and Competition, May 31, 2010, Avignon, France</p></li>
+ <p>2. Arash Behboodi, Pablo Piantanida, “On the Simultaneous Relay Channel with Informed Receivers”,
+IEEE International Symposium on Information Theory, ISIT 2009, June 28-July 3, 2009- Seoul, Korea
+</p>
+ <p>1. Mohsen Baratvand, Mahmood Tabandeh, Arash Behboodi, Ali Fotowat Ahmadi, “Jitter-Buffer Man-
+agement for VoIP over Wireless LAN in a Limited Resource Device”, the Fourth International Con-
+ference on Networking and Services, ICNS 2008, March 16-21, 2008 - Gosier, Guadeloupe
+</p>
+
+   </div>
+  
+      <div class="box">
+      <h3 class="o">       Reports</h3>
+      <span class="number"></span>
+      <div class="clearfix"></div>
+            <p>3. Tom Van Haute, Eli De Poorter, Jen Rossey, Ingrid Moerman, Vlado Handziski, Arash Behboodi, 
+      Filip Lemic, Adam Wolisz, Niklas Wiström, Thiemo Voigt, Pieter Crombez, Piet Verhoeve, Jose Javier de las Heras
+<a href="http://www.evarilos.eu/deliverables/D2.4_final_version_of_the_handbook.pdf" >The evarilos 
+benchmarking handbook: Evaluation of rf-based indoor localization solutions</a> 
+      EVARILOS project, 2013</p>
+      <p>2. Hieu Le, Arash Behboodi, Adam Wolisz,
+      <a href="http://www.tkn.tu-berlin.de/fileadmin/fg112/Papers/2013/behboodi13multiple_access_interference1.pdf">
+      Multiple Access Interference Mitigation in 
+      OFDMA Uplink via Static Assignment of Guard Bands and Guard Intervals</a> , TKN Technical Report Series
+TKN-13-004, Telecommunication Networks Group, Technische Universität Berlin, October 2013
+ </p>
+<p>1. Hieu Le, Arash Behboodi, Adam Wolisz,
+<a href="http://www.tkn.tu-berlin.de/fileadmin/fg112/Papers/2013/behboodi13multiple_access_interference2.pdf">
+Multiple Access Interference Mitigation in OFDMA Up-
+link using Dynamic Resource Allocation and Guard Bands
+</a> , TKN Technical Report Series
+TKN-13-005, Telecommunication Networks Group, Technische Universität Berlin, October 2013 </p>
+
+  </div>
+  
+<!--content"-->
+    </div>
+<!--wrapper--> 
+   </div>
+   <div id="footer">
+    <div class="credits left">Copyright <span class="o">O’No!</span> Typography 2009</div>
+  </div>
+<!--footer-->
+
+</body>
+
+</html>
