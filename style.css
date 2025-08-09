@@ -12,6 +12,7 @@ body{
 	font-weight: 300;
 }
 
+
 #wrap {
 	min-height: 100%;
 	height: auto !important;
@@ -22,8 +23,6 @@ body{
 
 .autosize{
 	max-height: 100%;
-/*    height: auto;
-    width: auto\9; /* ie8 */*/
 }
 
 /* Set the fixed height of the footer here */ 
@@ -44,7 +43,7 @@ body{
       }
 
 .soon{
-	font-size: 5em5
+	font-size: 5em5;
 	color: grey;
 }
 
@@ -433,5 +432,13 @@ img{
 	height: 124px;
 	margin-top: 20px;
 	/*vertical-align: bottom;*/
+
+}
+
+.blog-list-image{
+	width: 256px;
+	height: 236px;
+	object-fit: cover;
+	border-radius: 8px;
 
 }

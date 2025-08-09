@@ -4,7 +4,9 @@ title: Blog
 ---
 
 <h1>Writings on Ongoing Issues</h1>
-
+<p>Do not expect much depth...</p>
+<hr />
+<hr />
 {% for post in site.posts %}
 <table class="fixed" style="margin-bottom: 40px;">
   <col width="300px" />
@@ -12,7 +14,9 @@ title: Blog
   <tr>
     <!-- Left: your fixed profile photo -->
     <td>
-      <img src="{{ post.image | default: '/src/arash.jpeg' }}" alt="Post image" class="rounded" width="256px" height="236px" />
+      <img src="{{ post.image | default: '/src/arash.jpeg' }}"
+     alt="Post image"
+     class="blog-list-image" />
     </td>
 
     <!-- Right: post info -->
