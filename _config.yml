@@ -1,0 +1,11 @@
+title: "Arash Behboodi"
+description: "Personal website and blog"
+baseurl: ""        # Important for user GitHub Pages
+url: "https://arashbehboodi.github.io"
+
+# Disable Jekyll's default theming to preserve your current look
+theme: null
+
+# Markdown engine
+markdown: kramdown
+
