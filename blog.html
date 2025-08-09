@@ -3,7 +3,7 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog</h1>
+<h1>Writings on Ongoing Issues</h1>
 
 {% for post in site.posts %}
 <table class="fixed" style="margin-bottom: 40px;">
@@ -12,7 +12,7 @@ title: Blog
   <tr>
     <!-- Left: your fixed profile photo -->
     <td>
-      <img src="src/arash.jpeg" alt="Avatar" class="rounded" width="256px" height="236px" />
+      <img src="{{ post.image | default: '/src/arash.jpeg' }}" alt="Post image" class="rounded" width="256px" height="236px" />
     </td>
 
     <!-- Right: post info -->
