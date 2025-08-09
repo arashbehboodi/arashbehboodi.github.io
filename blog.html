@@ -1,13 +1,28 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
 ---
 
 <h1>Blog</h1>
-<ul>
-  {% for post in site.posts %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
-  {% endfor %}
-</ul>
 
+{% for post in site.posts %}
+<table class="fixed" style="margin-bottom: 40px;">
+  <col width="300px" />
+  <col width="600px" />
+  <tr>
+    <!-- Left: your fixed profile photo -->
+    <td>
+      <img src="src/arash.jpeg" alt="Avatar" class="rounded" width="256px" height="236px" />
+    </td>
+
+    <!-- Right: post info -->
+    <td align="left">
+      <h2 style="margin-top: 0;">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+      <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    </td>
+  </tr>
+</table>
+{% endfor %}

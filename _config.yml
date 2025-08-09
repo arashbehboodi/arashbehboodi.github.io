@@ -9,3 +9,6 @@ theme: null
 # Markdown engine
 markdown: kramdown
 
+collections:
+  posts:
+    output: true
