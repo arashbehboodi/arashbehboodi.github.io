@@ -18,6 +18,15 @@
 
     <script src="{{ '/jquery.min.js' | relative_url }}"></script>
     <script src="{{ '/bootstrap.min.js' | relative_url }}"></script>
+    <script>
+      $(function () {
+        $('.navbar-collapse a').on('click', function () {
+          if ($('.navbar-toggle').is(':visible') && $('.navbar-collapse').hasClass('in')) {
+            $('.navbar-collapse').collapse('hide');
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="wrap">
