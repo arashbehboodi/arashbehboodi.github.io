@@ -1,220 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Arash Behboodi">
-    <meta name="author" content="">
-
-    <link rel="icon" href="src/q.png">
-
-    <title>Arash Behboodi</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
-
-
-    <link href="bootstrap.css" rel="stylesheet">
-
-    
-    <link href="style.css" rel="stylesheet">
-    <script src="jquery.min.js"></script>
-     <script src="bootstrap.min.js"></script>
-    <![endif]
-  </head>
-  <body>
-    <div id="wrap">
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav ddmenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="publication.html">Publications</a></li> 
-      <li><a href="bio.html">Bio</a></li>          
-          </ul>
-        </div>
-      </div>
-    </div>
-
-<hr/><hr/>
-
-    <div class="container">
+---
+layout: default
+title: Home
+---
 
 <hr />
 
 <table class="fixed">
-    <col width="300px" />
-    <col width="600px" />
-<tr>
-<td>
-<img src="src/arash.jpeg" alt="Avatar" class="rounded" width="256px" height="236px" /> 
-</td>
-<td align="left">
-  <h1 id="arash-behboodi">Arash Behboodi</h1>
-<p>I am a research scientist and Director of Engineering at <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>. 
-I am interested in general in theoretical foundations of information and computational systems. My research interests include among others information theory, learning theory, machine learning for inverse problems, compressed sensing, geometric deep learning, differentiable simulation and agentic AI. 
-</p>
- <a itemprop="sameAs" href="mailto:behboodi@qti.qualcomm.com" target="_blank">
-            <i class="fa fa-envelope big-icon"></i>
-          </a>        
- <a itemprop="sameAs" href="https://www.linkedin.com/in/arashbehboodi" target="_blank">
-  <i class="fa fa-linkedin"></i>
-          </a>
-
-</ul>
-</td>
-</tr>
+  <col width="300px" />
+  <col width="600px" />
+  <tr>
+    <td>
+      <img src="src/arash.jpeg" alt="Avatar" class="rounded" width="256px" height="236px" />
+    </td>
+    <td align="left">
+      <h1 id="arash-behboodi">Arash Behboodi</h1>
+      <p>
+        I am a research scientist and Director of Engineering at
+        <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.
+        I am interested in general in theoretical foundations of information and computational systems. My research interests include among others information theory, learning theory, machine learning for inverse problems, compressed sensing, geometric deep learning, differentiable simulation and agentic AI.
+      </p>
+      <a itemprop="sameAs" href="mailto:behboodi@qti.qualcomm.com" target="_blank">
+        <i class="fa fa-envelope big-icon"></i>
+      </a>
+      <a itemprop="sameAs" href="https://www.linkedin.com/in/arashbehboodi" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </td>
+  </tr>
 </table>
 
 <hr />
 <h3 id="news-and-highlights">News and Highlights</h3>
 <hr />
 <ul>
-
-<li>
-  <p>New paper on our NeurIPS 2025 demo: <a href="https://arxiv.org/abs/2603.16867">
-Efficient Reasoning on the Edge</a> and <a href="https://huggingface.co/papers/2603.16867">Hugging Face page</a></p>
-</li>
-
-
-<li>
-  <p>New paper: <a href="https://openreview.net/forum?id=6WAuvwZjmw">
-LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation
-</a> </p>
-</li>
-
-<li>
-  <p>New paper: <a href="https://arxiv.org/abs/2603.08462">
-    Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck
-</a> </p>
-</li>
-
   <li>
-  <p>New paper: <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents
-</a> </p>
-</li>
-
-  <li><p> See  our NeurIPS 2025 expo demo on:  
-    <a href="https://qualcomm-ai-research.github.io/llm-reasoning-on-edge/"> Efficient Reasoning on the Edge.</a>
-  </p></li>
-  <li><p>
-   New paper:
-    <a href="">Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction</a>
-  </p></li>
-  <li><p>I give a keynote talk about <strong>Information Theoretic Perspective on Conformal Prediction</strong> at 14th Symposium on Conformal and Probabilistic Prediction with Applications,  
-<a href="https://copa-conference.com/"> COPA 2025</a></p></li>
-
-<li><p>
-Accepted paper at Globecom 2025:
-  <a href="https://arxiv.org/abs/2508.08790">ReQuestNet: 
-    A Foundational Learning model 
-    for Channel Estimation</a>
-</p></li>
-
-  
-<li><p> Accepted paper at ACL 2025: <a href="https://arxiv.org/abs/2503.09730">Local Look-Ahead Guidance via Verifier-in-the-Loop for Automated Theorem Proving</a>, 
-  also presented at ICLR 2025 Workshop on Reasoning and Planning for Large Language Models
-</p></li>
-
-<li><p>Accepted paper at ICLR 2025: <a href="https://arxiv.org/abs/2410.18234">Multi-Draft Speculative Sampling: Canonical Architectures and Theoretical Limits
-</a> (Spotlight)
- </p></li>
-
-<li><p>Accepted paper at ICLR 2025: <a href="https://arxiv.org/abs/2406.14995">Probabilistic and Differentiable Wireless Simulation with Geometric Transformers
-</a> </p></li>
-
-
-<li><p>Accepted paper at TMLR: <a href="https://arxiv.org/abs/2411.14288">On the Sample Complexity of One Hidden Layer Networks with Equivariance, Locality and Weight Sharing
-</a> </p></li>
-
-
-<li><p>Accepted paper at TMLR: <a href="https://openreview.net/forum?id=YxXyRSlZ4b">Neural Lattice Reduction: A Self-Supervised Geometric Deep Learning Approach
-</a> </p></li>
+    <p>New paper on our NeurIPS 2025 demo: <a href="https://arxiv.org/abs/2603.16867">Efficient Reasoning on the Edge</a> and <a href="https://huggingface.co/papers/2603.16867">Hugging Face page</a></p>
+  </li>
+  <li>
+    <p>New paper: <a href="https://openreview.net/forum?id=6WAuvwZjmw">LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation</a></p>
+  </li>
+  <li>
+    <p>New paper: <a href="https://arxiv.org/abs/2603.08462">Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck</a></p>
+  </li>
+  <li>
+    <p>New paper: <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents</a></p>
+  </li>
+  <li>
+    <p>See our NeurIPS 2025 expo demo on: <a href="https://qualcomm-ai-research.github.io/llm-reasoning-on-edge/">Efficient Reasoning on the Edge.</a></p>
+  </li>
+  <li>
+    <p>New paper: <a href="">Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction</a></p>
+  </li>
+  <li>
+    <p>I give a keynote talk about <strong>Information Theoretic Perspective on Conformal Prediction</strong> at 14th Symposium on Conformal and Probabilistic Prediction with Applications, <a href="https://copa-conference.com/">COPA 2025</a></p>
+  </li>
+  <li>
+    <p>Accepted paper at Globecom 2025: <a href="https://arxiv.org/abs/2508.08790">ReQuestNet: A Foundational Learning model for Channel Estimation</a></p>
+  </li>
+  <li>
+    <p>Accepted paper at ACL 2025: <a href="https://arxiv.org/abs/2503.09730">Local Look-Ahead Guidance via Verifier-in-the-Loop for Automated Theorem Proving</a>, also presented at ICLR 2025 Workshop on Reasoning and Planning for Large Language Models</p>
+  </li>
+  <li>
+    <p>Accepted paper at ICLR 2025: <a href="https://arxiv.org/abs/2410.18234">Multi-Draft Speculative Sampling: Canonical Architectures and Theoretical Limits</a> (Spotlight)</p>
+  </li>
+  <li>
+    <p>Accepted paper at ICLR 2025: <a href="https://arxiv.org/abs/2406.14995">Probabilistic and Differentiable Wireless Simulation with Geometric Transformers</a></p>
+  </li>
+  <li>
+    <p>Accepted paper at TMLR: <a href="https://arxiv.org/abs/2411.14288">On the Sample Complexity of One Hidden Layer Networks with Equivariance, Locality and Weight Sharing</a></p>
+  </li>
+  <li>
+    <p>Accepted paper at TMLR: <a href="https://openreview.net/forum?id=YxXyRSlZ4b">Neural Lattice Reduction: A Self-Supervised Geometric Deep Learning Approach</a></p>
+  </li>
 </ul>
 
 <hr />
 <h3 id="recent-papers">Selected recent papers</h3>
 <hr />
 <ul>
-<li>
-  <p>Yelysei Bondarenko et al., <a href="https://arxiv.org/abs/2603.16867">
-Efficient Reasoning on the Edge</a>, 2026</p>
-</li>
-
   <li>
-  <p> Gabriele Cesa, Thomas Hehn, Aleix Torres-Camps, Àlex Batlle Casellas, 
-    Jordi Ros-Giralt, Arash Behboodi, Tribhuvanesh Orekondy, 
-    <a href="https://arxiv.org/abs/2601.16649">LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation
-</a>, Preprint 2026 </p>
-</li>
-
+    <p>Yelysei Bondarenko et al., <a href="https://arxiv.org/abs/2603.16867">Efficient Reasoning on the Edge</a>, 2026</p>
+  </li>
   <li>
-  <p>Fabio Valerio Massoli, Andrey Kuzmin, Arash Behboodi,  
-    <a href="https://arxiv.org/abs/2603.08462">      Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck
-</a>, Preprint 2026 </p>
-</li>
-
+    <p>Gabriele Cesa, Thomas Hehn, Aleix Torres-Camps, Àlex Batlle Casellas, Jordi Ros-Giralt, Arash Behboodi, Tribhuvanesh Orekondy, <a href="https://arxiv.org/abs/2601.16649">LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation</a>, Preprint 2026</p>
+  </li>
   <li>
-  <p>Amin Rakhsha, Thomas Hehn, Pietro Mazzaglia, Fabio Valerio Massoli, Arash Behboodi, Tribhuvanesh Orekondy, <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents
-</a>, Preprint 2026 </p>
-</li>
-  <li><p>
-    Arash Behboodi, Alvaro H.C. Correia, Fabio Valerio Massoli, Christos Louizos,
-    <a href="">Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction</a>, Preprint, 2025
-  </p></li>
-  <li><p>Julian Suk, Thomas Hehn, Arash Behboodi, Gabriele Cesa, <a href="https://openreview.net/forum?id=Eb7fQBdA3D">  ViNE-GATr: scaling geometric algebra transformers with virtual nodes embeddings
-  </a>, 
-  ICLR 2025 Workshop on Machine Learning Multiscale Processes (<strong>Best Poster Award</strong>)
-</p></li>
-
-<li><p>Sara Rajaee, Kumar Pratik, Gabriele Cesa, Arash Behboodi, <a href="https://arxiv.org/abs/2503.09730">Local Look-Ahead Guidance via Verifier-in-the-Loop for Automated Theorem Proving</a>, ACL 2025, and ICLR 2025 Workshop on Reasoning and Planning for Large Language Models</p></li>
-
-<li><p>Ashish Khisti, M.Reza Ebrahimi, Hassan Dbouk, Arash Behboodi, Roland Memisevic, Christos Louizos, <a href="https://arxiv.org/abs/2410.18234">Multi-Draft Speculative Sampling: Canonical Architectures and Theoretical Limits
-</a>, ICLR 2025 (Spotlight), also appeared at ICML 2024 Workshop on Theoretical Foundations of Foundation Models
- </p></li>
-
-
-<li><p>Thomas Hehn, Markus Peschl, Tribhuvanesh Orekondy, Arash Behboodi, Johann Brehmer, <a href="https://arxiv.org/abs/2406.14995">Probabilistic and Differentiable Wireless Simulation with Geometric Transformers
-</a>, ICLR 2025, also appeared at ICML 2024 Workshop on Geometry-grounded Representation Learning and Generative Modeling 2024  </p></li>
-
-
-<li><p>Arash Behboodi, Gabriele Cesa, <a href="https://arxiv.org/abs/2411.14288">On the Sample Complexity of One Hidden Layer Networks with Equivariance, Locality and Weight Sharing
-</a>, TMLR, 2025  </p></li>
-
-<li><p>Giovanni Luca Marchetti, Gabriele Cesa, Kumar Pratik, Arash Behboodi, <a href="https://openreview.net/forum?id=YxXyRSlZ4b">Neural Lattice Reduction: A Self-Supervised Geometric Deep Learning Approach
-</a>, TMLR 2025, also appeared in Symmetry and Geometry in Neural Representations - NeurReps Workshop, NeurIPS 2023</p></li> 
-
-
+    <p>Fabio Valerio Massoli, Andrey Kuzmin, Arash Behboodi, <a href="https://arxiv.org/abs/2603.08462">Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck</a>, Preprint 2026</p>
+  </li>
+  <li>
+    <p>Amin Rakhsha, Thomas Hehn, Pietro Mazzaglia, Fabio Valerio Massoli, Arash Behboodi, Tribhuvanesh Orekondy, <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents</a>, Preprint 2026</p>
+  </li>
+  <li>
+    <p>Arash Behboodi, Alvaro H.C. Correia, Fabio Valerio Massoli, Christos Louizos, <a href="">Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction</a>, Preprint, 2025</p>
+  </li>
+  <li>
+    <p>Julian Suk, Thomas Hehn, Arash Behboodi, Gabriele Cesa, <a href="https://openreview.net/forum?id=Eb7fQBdA3D">ViNE-GATr: scaling geometric algebra transformers with virtual nodes embeddings</a>, ICLR 2025 Workshop on Machine Learning Multiscale Processes (<strong>Best Poster Award</strong>)</p>
+  </li>
+  <li>
+    <p>Sara Rajaee, Kumar Pratik, Gabriele Cesa, Arash Behboodi, <a href="https://arxiv.org/abs/2503.09730">Local Look-Ahead Guidance via Verifier-in-the-Loop for Automated Theorem Proving</a>, ACL 2025, and ICLR 2025 Workshop on Reasoning and Planning for Large Language Models</p>
+  </li>
+  <li>
+    <p>Ashish Khisti, M.Reza Ebrahimi, Hassan Dbouk, Arash Behboodi, Roland Memisevic, Christos Louizos, <a href="https://arxiv.org/abs/2410.18234">Multi-Draft Speculative Sampling: Canonical Architectures and Theoretical Limits</a>, ICLR 2025 (Spotlight), also appeared at ICML 2024 Workshop on Theoretical Foundations of Foundation Models</p>
+  </li>
+  <li>
+    <p>Thomas Hehn, Markus Peschl, Tribhuvanesh Orekondy, Arash Behboodi, Johann Brehmer, <a href="https://arxiv.org/abs/2406.14995">Probabilistic and Differentiable Wireless Simulation with Geometric Transformers</a>, ICLR 2025, also appeared at ICML 2024 Workshop on Geometry-grounded Representation Learning and Generative Modeling 2024</p>
+  </li>
+  <li>
+    <p>Arash Behboodi, Gabriele Cesa, <a href="https://arxiv.org/abs/2411.14288">On the Sample Complexity of One Hidden Layer Networks with Equivariance, Locality and Weight Sharing</a>, TMLR, 2025</p>
+  </li>
+  <li>
+    <p>Giovanni Luca Marchetti, Gabriele Cesa, Kumar Pratik, Arash Behboodi, <a href="https://openreview.net/forum?id=YxXyRSlZ4b">Neural Lattice Reduction: A Self-Supervised Geometric Deep Learning Approach</a>, TMLR 2025, also appeared in Symmetry and Geometry in Neural Representations - NeurReps Workshop, NeurIPS 2023</p>
+  </li>
 </ul>
 
-<hr/>
+<hr />
 <h3 id="misc">Misc.</h3>
 <hr />
 <ul>
-
-<li><p>
-Workshop <a href="https://d3s3workshop.github.io/">D3S3: Data-driven and Differentiable Simulations, Surrogates, and Solvers</a> at NeurIPS 2024.</p>
-</li>
-
-<li><p>My chat with Sam Charrington at TWIML AI podcast around
-   <a href="https://twimlai.com/podcast/twimlai/ai-at-the-edge-qualcomm-ai-research-at-neurips-2024/">Differentiable Simulation, Conformal Prediction, and AI at the Edge </a>. </p></li>
-
-
+  <li>
+    <p>Workshop <a href="https://d3s3workshop.github.io/">D3S3: Data-driven and Differentiable Simulations, Surrogates, and Solvers</a> at NeurIPS 2024.</p>
+  </li>
+  <li>
+    <p>My chat with Sam Charrington at TWIML AI podcast around <a href="https://twimlai.com/podcast/twimlai/ai-at-the-edge-qualcomm-ai-research-at-neurips-2024/">Differentiable Simulation, Conformal Prediction, and AI at the Edge</a>.</p>
+  </li>
 </ul>
-
-</div>
-	</td></tr></table>
-<hr/>
-
-
-
-	</body></html>
