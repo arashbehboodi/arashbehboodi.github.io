@@ -13,3 +13,7 @@ markdown: kramdown
 collections:
   posts:
     output: true
+
+exclude:
+  - README.md
+  - arashbehboodi.github.io.code-workspace

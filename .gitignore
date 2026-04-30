@@ -1,4 +1,5 @@
 .codex
 .jekyll-cache/
+.jekyll-metadata
 _site/
 *.code-workspace

@@ -43,7 +43,7 @@ body{
       }
 
 .soon{
-	font-size: 5em5;
+	font-size: 5em;
 	color: grey;
 }
 
@@ -146,8 +146,6 @@ p{
 
 
 #maininfo{
-	background: transparent url('./resources/hongkong.jpg') no-repeat scroll top center;
-	background-size: auto 100%;
 	text-align: center;
 }
 
@@ -441,4 +439,32 @@ img{
 	object-fit: cover;
 	border-radius: 8px;
 
+}
+
+.post-content{
+	margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+	table.fixed,
+	table.fixed tbody,
+	table.fixed tr,
+	table.fixed td {
+		display: block;
+		width: 100% !important;
+	}
+
+	table.fixed col {
+		display: none;
+	}
+
+	table.fixed td {
+		padding-bottom: 16px;
+	}
+
+	.blog-list-image {
+		width: 100%;
+		height: auto;
+		max-height: 320px;
+	}
 }
