@@ -4,36 +4,47 @@ title: Home
 description: Research, publications, and writing by Arash Behboodi.
 ---
 
-<hr />
-
-<table class="fixed">
-  <col width="300px" />
-  <col width="600px" />
-  <tr>
-    <td>
-      <img src="{{ '/src/arash.jpeg' | relative_url }}" alt="Avatar" class="rounded" width="256px" height="236px" />
-    </td>
-    <td align="left">
-      <h1 id="arash-behboodi">Arash Behboodi</h1>
-      <p>
-        I am a research scientist and Director of Engineering at
-        <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.
-        I am interested in general in theoretical foundations of information and computational systems. My research interests include among others information theory, learning theory, machine learning for inverse problems, compressed sensing, geometric deep learning, differentiable simulation and agentic AI.
-      </p>
-      <a itemprop="sameAs" href="mailto:behboodi@qti.qualcomm.com" target="_blank" rel="noopener noreferrer" aria-label="Email Arash Behboodi">
-        <i class="fa fa-envelope big-icon"></i>
+<section class="hero">
+  <div class="hero-media">
+    <img src="{{ '/src/arash.jpeg' | relative_url }}" alt="Portrait of Arash Behboodi" class="rounded profile-photo" width="256" height="256" />
+  </div>
+  <div class="hero-copy">
+    <h1 id="arash-behboodi">Arash Behboodi</h1>
+    <p class="hero-lead">
+      I am a research scientist and Director of Engineering at
+      <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>,
+      working on the theoretical foundations of information and computational systems.
+    </p>
+    <p>
+      My interests include information theory, learning theory, machine learning for inverse problems, compressed sensing, geometric deep learning, differentiable simulation, and agentic AI.
+    </p>
+    <div class="hero-tags" aria-label="Research areas">
+      <span class="hero-tag">Information Theory</span>
+      <span class="hero-tag">Learning Theory</span>
+      <span class="hero-tag">Inverse Problems</span>
+    </div>
+    <div class="hero-actions">
+      <a class="button-link" href="{{ '/publication.html' | relative_url }}">View Publications</a>
+      <a class="button-link is-secondary" href="{{ '/bio.html' | relative_url }}">Read Bio</a>
+      <a class="button-link is-secondary" href="{{ '/blog/' | relative_url }}">Visit Blog</a>
+    </div>
+    <div class="social-links">
+      <a itemprop="sameAs" class="social-link" href="mailto:behboodi@qti.qualcomm.com" target="_blank" rel="noopener noreferrer" aria-label="Email Arash Behboodi">
+        <i class="fa fa-envelope"></i>
+        <span>Email</span>
       </a>
-      <a itemprop="sameAs" href="https://www.linkedin.com/in/arashbehboodi" target="_blank" rel="noopener noreferrer" aria-label="Arash Behboodi on LinkedIn">
+      <a itemprop="sameAs" class="social-link" href="https://www.linkedin.com/in/arashbehboodi" target="_blank" rel="noopener noreferrer" aria-label="Arash Behboodi on LinkedIn">
         <i class="fa fa-linkedin"></i>
+        <span>LinkedIn</span>
       </a>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+</section>
 
-<hr />
-<h3 id="news-and-highlights">News and Highlights</h3>
-<hr />
-<ul>
+<section class="section-card">
+  <h3 id="news-and-highlights">News and Highlights</h3>
+  <p class="section-intro">Recent papers, talks, and research updates.</p>
+  <ul class="feature-list">
   <li>
     <p>New paper on our NeurIPS 2025 demo: <a href="https://arxiv.org/abs/2603.16867">Efficient Reasoning on the Edge</a> and <a href="https://huggingface.co/papers/2603.16867">Hugging Face page</a></p>
   </li>
@@ -74,11 +85,12 @@ description: Research, publications, and writing by Arash Behboodi.
     <p>Accepted paper at TMLR: <a href="https://openreview.net/forum?id=YxXyRSlZ4b">Neural Lattice Reduction: A Self-Supervised Geometric Deep Learning Approach</a></p>
   </li>
 </ul>
+</section>
 
-<hr />
-<h3 id="recent-papers">Selected recent papers</h3>
-<hr />
-<ul>
+<section class="section-card">
+  <h3 id="recent-papers">Selected Recent Papers</h3>
+  <p class="section-intro">A quick tour through recent work across theory, reasoning, and simulation.</p>
+  <ul class="feature-list">
   <li>
     <p>Yelysei Bondarenko et al., <a href="https://arxiv.org/abs/2603.16867">Efficient Reasoning on the Edge</a>, 2026</p>
   </li>
@@ -113,11 +125,12 @@ description: Research, publications, and writing by Arash Behboodi.
     <p>Giovanni Luca Marchetti, Gabriele Cesa, Kumar Pratik, Arash Behboodi, <a href="https://openreview.net/forum?id=YxXyRSlZ4b">Neural Lattice Reduction: A Self-Supervised Geometric Deep Learning Approach</a>, TMLR 2025, also appeared in Symmetry and Geometry in Neural Representations - NeurReps Workshop, NeurIPS 2023</p>
   </li>
 </ul>
+</section>
 
-<hr />
-<h3 id="misc">Misc.</h3>
-<hr />
-<ul>
+<section class="section-card">
+  <h3 id="misc">Misc.</h3>
+  <p class="section-intro">Workshops, conversations, and related projects.</p>
+  <ul class="feature-list compact-list">
   <li>
     <p>Workshop <a href="https://d3s3workshop.github.io/">D3S3: Data-driven and Differentiable Simulations, Surrogates, and Solvers</a> at NeurIPS 2024.</p>
   </li>
@@ -125,3 +138,4 @@ description: Research, publications, and writing by Arash Behboodi.
     <p>My chat with Sam Charrington at TWIML AI podcast around <a href="https://twimlai.com/podcast/twimlai/ai-at-the-edge-qualcomm-ai-research-at-neurips-2024/">Differentiable Simulation, Conformal Prediction, and AI at the Edge</a>.</p>
   </li>
 </ul>
+</section>
