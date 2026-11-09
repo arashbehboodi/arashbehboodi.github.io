@@ -3,6 +3,7 @@ author: "Arash Behboodi"
 description: "Personal website and blog"
 baseurl: ""        # Important for user GitHub Pages
 url: "https://arashbehboodi.github.io"
+timezone: Europe/Amsterdam
 
 # Disable Jekyll's default theming to preserve your current look
 theme: null

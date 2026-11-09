@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bottleneck Theory of Post-training"
-date: 2026-11-10
+date: 2026-11-10 00:00:00 +0100
 ---
 
 *This is the inaugural post of my blog, which I wanted to kick off for some time. and it is a great start, on a topic I like. I wrote this together with great [Fabio Valerio Massoli](https://scholar.google.com/citations?user=b5kxczMAAAAJ&hl=it), following our upcoming paper at NeurIPS'26 on using information bottleneck methods for neural  reasoning.*
