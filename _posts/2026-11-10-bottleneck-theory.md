@@ -4,7 +4,7 @@ title: "Bottleneck Theory of Post-training"
 date: 2026-11-10 00:00:00 +0100
 ---
 
-*This is the inaugural post of my blog, which I wanted to kick off for some time. and it is a great start, on a topic I like. I wrote this together with great [Fabio Valerio Massoli](https://scholar.google.com/citations?user=b5kxczMAAAAJ&hl=it), following our upcoming paper at NeurIPS'26 on using information bottleneck methods for neural  reasoning.*
+*This is the inaugural post of my blog, which I wanted to kick off for some time. and it is a great start, on a topic I like. I wrote this together with great [Fabio Valerio Massoli](https://fvmassoli.github.io/), following our upcoming paper at NeurIPS'26 on using information bottleneck methods for neural  reasoning.*
 
 In modern reasoning-model training, we hear of methods like RL with verifiable rewards (RLVR) [[5]](#ref-5), reinforcement learning from AI feedback (RLAIF) [[6]](#ref-6), on-policy distillation (OPD) [[8]](#ref-8), on-policy self-distillation [[7]](#ref-7), and many other variants. They differ in where their training signal comes from, whether the signal is scalar or token-level, and whether the training data are on-policy or offline.
 Despite the differences, they optimize remarkably similar objectives.
