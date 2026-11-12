@@ -31,7 +31,7 @@ body {
     linear-gradient(34deg, transparent 0 78%, rgba(200, 58, 44, 0.14) 78% 88%, transparent 88% 100%),
     linear-gradient(180deg, #f8f4ec 0%, var(--bg) 52%, #f6f0e4 100%);
   color: var(--text);
-  font: 400 17px/1.8 "Lato", sans-serif;
+  font: 400 17px/1.8 "Newsreader", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -95,7 +95,7 @@ h3,
 h4 {
   margin-top: 0;
   color: var(--heading);
-  font-family: "Merriweather", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   line-height: 1.25;
 }
 
@@ -156,7 +156,7 @@ hr {
   height: 56px;
   margin: 0;
   padding: 0 15px;
-  font-family: "Merriweather", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.05rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -609,6 +609,7 @@ hr {
 .post-content h4 { font-size: 1.05rem; }
 
 .post-content mjx-container[display="true"] {
+  font-size: 85% !important; /* Override MathJax's inline size adjustment. */
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
@@ -623,7 +624,7 @@ hr {
 .organizer,
 .namecard,
 .profile {
-  font-family: "Lato", sans-serif;
+  font-family: "Newsreader", Georgia, serif;
 }
 
 .important,
@@ -801,4 +802,157 @@ h4 {
     align-items: center;
     min-height: 56px;
   }
+}
+
+/* A quiet reading layout for long-form posts. */
+.site-main-post {
+  width: min(100% - 40px, 1500px);
+}
+
+.page-shell-post {
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.post-layout {
+  max-width: 1420px;
+  margin: 0 auto;
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.post-layout .post {
+  min-width: 0;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3vw, 3.5rem);
+  border: 0;
+  border-radius: 4px;
+  background: #faf7ef;
+  box-shadow: 0 8px 35px rgba(38, 31, 23, 0.06);
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.post-layout .post header {
+  margin-bottom: 2.4rem;
+  padding: 0 0 1.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.post-layout .post header h1,
+.post-layout .post-content h1,
+.post-layout .post-content h2,
+.post-layout .post-content h3,
+.post-layout .post-content h4 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  line-height: 1.12;
+  font-weight: 700;
+  scroll-margin-top: 100px;
+}
+
+.post-layout .post header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+}
+
+.post-layout .post-meta {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.post-layout .post-content h1 { font-size: 2.3rem; }
+.post-layout .post-content h2 { font-size: 2rem; }
+.post-layout .post-content h3 { font-size: 1.6rem; }
+.post-layout .post-content h4 { font-size: 1.35rem; }
+.post-layout .post-content h2,
+.post-layout .post-content h3 { margin-top: 1.7em; }
+.post-layout .post-content ul,
+.post-layout .post-content ol { font-size: 16px; }
+.post-layout .post-content a { text-decoration: underline; text-decoration-color: rgba(200, 58, 44, 0.35); text-underline-offset: 0.15em; overflow-wrap: anywhere; }
+.post-layout .post-content blockquote { border-left: 2px solid var(--accent); padding-left: 1.2em; font-size: 1em; }
+.post-layout .post-content [id] { scroll-margin-top: 100px; }
+
+.post-sidebar {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.post-sidebar[hidden] { display: none; }
+.post-sidebar summary,
+.post-sidebar h2 {
+  margin: 0 0 0.9rem;
+  color: var(--text);
+  font: 600 1.35rem/1.2 "Cormorant Garamond", Georgia, serif;
+}
+.post-sidebar summary { cursor: pointer; }
+.post-sidebar ol { margin: 0; padding: 0; list-style: none; }
+.post-sidebar li { margin: 0 0 0.7rem; }
+.post-sidebar a { color: inherit; }
+.post-sidebar a:hover,
+.post-sidebar a:focus,
+.post-sidebar a[aria-current="location"] { color: var(--accent); }
+.post-toc-subsection { padding-left: 0.8rem; }
+.post-sidebar-contents { max-width: 760px; margin: 0 auto 1rem; }
+.post-sidebar-contents .post-toc-list { font-size: 0.72rem; line-height: 1.35; }
+.post-toc { padding: 1rem 1.5rem; background: #faf7ef; }
+.post-toc summary { margin: 0; }
+.post-toc summary::after { content: ' +'; float: right; }
+.post-toc[open] summary::after { content: ' −'; }
+.post-toc[open] summary { margin-bottom: 0.9rem; }
+.post-sidebar-references { display: none; }
+.post-sidebar-references h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+.post-sidebar-references .post-reference-list { font-size: 0.72rem; line-height: 1.35; }
+.post-reference-list li { overflow-wrap: anywhere; }
+.post-reference-list p { display: inline; color: inherit; }
+.post-reference-number { margin-right: 0.35em; color: var(--accent) !important; }
+
+@media (min-width: 1200px) {
+  .post-layout {
+    display: grid;
+    grid-template-columns: minmax(160px, 200px) minmax(0, 760px) minmax(180px, 230px);
+    justify-content: center;
+    gap: clamp(20px, 2.5vw, 40px);
+    align-items: start;
+  }
+  .post-layout .post { grid-column: 2; grid-row: 1; width: 100%; }
+  .post-sidebar {
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  .post-sidebar-contents { grid-column: 1; grid-row: 1; margin: 0; }
+  .post-sidebar-references:not([hidden]) {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: stretch;
+    position: relative;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  .post-reference-list li { position: absolute; left: 0; right: 0; margin: 0; }
+  .post-toc { padding: 0; background: transparent; }
+  .post-toc summary { cursor: default; list-style: none; }
+  .post-toc summary::after,
+  .post-toc[open] summary::after { content: none; }
+  .post-toc summary::-webkit-details-marker { display: none; }
+}
+
+@media (max-width: 767px) {
+  .site-main-post { width: calc(100% - 24px); }
+  .post-layout .post { padding: 1.5rem 1.2rem; font-size: 1.18rem; }
+  .post-layout .post header h1 { font-size: 2rem; }
+  .post-layout .post-content h2 { font-size: 1.8rem; }
 }

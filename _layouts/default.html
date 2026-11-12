@@ -11,7 +11,7 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 
     <link href="{{ '/bootstrap.css' | relative_url }}" rel="stylesheet">
     <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
@@ -52,8 +52,8 @@
         </div>
       </div>
 
-      <main class="site-main container">
-        <div class="page-shell {% if page.title == 'Home' %}page-home{% endif %}">
+      <main class="site-main container{% if page.layout == 'post' %} site-main-post{% endif %}">
+        <div class="page-shell {% if page.title == 'Home' %}page-home{% endif %}{% if page.layout == 'post' %} page-shell-post{% endif %}">
           {% unless page.title == 'Home' or page.layout == 'post' %}
             <header class="page-title-block">
               <h1>{{ page.title }}</h1>

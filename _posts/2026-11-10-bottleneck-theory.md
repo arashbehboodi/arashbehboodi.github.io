@@ -4,23 +4,23 @@ title: "Bottleneck Theory of Post-training"
 date: 2026-11-10 00:00:00 +0100
 ---
 
-*This is the inaugural post of my blog, which I wanted to kick off for some time. and it is a great start, on a topic I like. I wrote this together with great [Fabio Valerio Massoli](https://fvmassoli.github.io/), following our upcoming paper at NeurIPS'26 on using information bottleneck methods for neural  reasoning.*
+*This is the inaugural post of my blog, which I wanted to kick off for some time. and it is a great start, on a topic I like. I wrote this together with great [Fabio Valerio Massoli](https://fvmassoli.github.io/), following our upcoming paper at NeurIPS'26 on using [conditional information bottleneck methods for neural reasoning](https://arxiv.org/abs/2402.03300).*
 
-In modern reasoning-model training, we hear of methods like RL with verifiable rewards (RLVR) [[5]](#ref-5), reinforcement learning from AI feedback (RLAIF) [[6]](#ref-6), on-policy distillation (OPD) [[8]](#ref-8), on-policy self-distillation [[7]](#ref-7), and many other variants. They differ in where their training signal comes from, whether the signal is scalar or token-level, and whether the training data are on-policy or offline.
+In modern reasoning-model training, we hear of methods like RL with verifiable rewards (RLVR) [[1]](#ref-1), reinforcement learning from AI feedback (RLAIF) [[2]](#ref-2), on-policy distillation (OPD) [[3]](#ref-3), on-policy self-distillation [[4]](#ref-4), and many other variants. They differ in where their training signal comes from, whether the signal is scalar or token-level, and whether the training data are on-policy or offline.
 Despite the differences, they optimize remarkably similar objectives.
 
 
-This is the main message of this post, and what we have explained in our paper *Reasoning as Compression* [[1]](#ref-1):
+This is the main message of this post, and what we have explained in our paper *Reasoning as Compression* [[5]](#ref-5):
 
 > **Reasoning models learn a stochastic reasoning channel that simulates the path going from question to answer, with the reasoning structure emerging from the constraints on the reasoning path. Post-training methods are special cases of this view, formalized under the conditional information bottleneck framework.**
 
-In particular, budget-forcing variants [[9]](#ref-9), that is, methods compressing reasoning tokens, are a special case of the bottleneck view: reasoning traces should preserve task-relevant information while discarding information that is unnecessary, costly, or already available from the prompt.
+In particular, budget-forcing variants [[6]](#ref-6), that is, methods compressing reasoning tokens, are a special case of the bottleneck view: reasoning traces should preserve task-relevant information while discarding information that is unnecessary, costly, or already available from the prompt.
 
-We introduced the Conditional Information Bottleneck (CIB) in our paper *Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck* [[1]](#ref-1) to formalize this view.
+We introduced the Conditional Information Bottleneck (CIB) in our paper *Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck* [[5]](#ref-5) to formalize this view.
 
 ## Reasoning, information bottleneck and emergence of structure
 
-What is reasoning? There are many accounts of what reasoning is, but let's start with this version for now: "Theoretical reasoning is a mental process that takes you from premises that you believe to a conclusion that you come to believe as a result of the process." (Broome, 2021 [[10]](#ref-10)).
+What is reasoning? There are many accounts of what reasoning is, but let's start with this version for now: "Theoretical reasoning is a mental process that takes you from premises that you believe to a conclusion that you come to believe as a result of the process." (Broome, 2021 [[7]](#ref-7)).
 
 We want to look at neural reasoning in a similar way: a process, a **path** that goes from the premise (the prompt, the query) to a conclusion, our final answer. And the differences between post-training methods can be organized by a single information-theoretic picture:
 
@@ -28,7 +28,7 @@ We want to look at neural reasoning in a similar way: a process, a **path** that
 
 Of course, reasoning as we know it, indeed anthropomorphically, comes with additional normative features: following inference rules, logical consistency, evidence accumulation and attribution. The hope of post-training is to learn these structures holistically, not necessarily by imbuing these rules within the model, but by making them emerge as a result of our learning process.
 
-Structure emerging under constraint has been a recurring theme in physics, information theory, complexity theory and biology. We are going to pick the information bottleneck framework (Tishby, Pereira, and Bialek, 1999 [[2]](#ref-2)), which has also been used to study deep learning (Shwartz-Ziv and Tishby, 2017 [[11]](#ref-11)), to continue. In information bottleneck, given a joint distribution between an input variable $$X$$ (the data) and a relevant target variable $$Y$$ (what needs to be predicted), we want to find a compressed representation $$T$$ that retains as much information about $$Y$$ as possible. The constraint is on $$T$$: the mutual information $$I(X; T)$$ needs to be constrained. In this case, optimizing the Lagrangian $$\mathcal{L} = I(T; Y) - \beta I(X; T)$$ forces the system to perform a non-linear quantization. The irrelevancies and noise of $$X$$ are stripped away. What remains is a parsimonious, maximally informative sufficient statistic ($$T$$) that captures the structure needed to solve the problem.
+Structure emerging under constraint has been a recurring theme in physics, information theory, complexity theory and biology. We are going to pick the information bottleneck framework (Tishby, Pereira, and Bialek, 1999 [[8]](#ref-8)), which has also been used to study deep learning (Shwartz-Ziv and Tishby, 2017 [[9]](#ref-9)), to continue. In information bottleneck, given a joint distribution between an input variable $$X$$ (the data) and a relevant target variable $$Y$$ (what needs to be predicted), we want to find a compressed representation $$T$$ that retains as much information about $$Y$$ as possible. The constraint is on $$T$$: the mutual information $$I(X; T)$$ needs to be constrained. In this case, optimizing the Lagrangian $$\mathcal{L} = I(T; Y) - \beta I(X; T)$$ forces the system to perform a non-linear quantization. The irrelevancies and noise of $$X$$ are stripped away. What remains is a parsimonious, maximally informative sufficient statistic ($$T$$) that captures the structure needed to solve the problem.
 
 To apply the information bottleneck to reasoning, there is a catch.
 
@@ -86,7 +86,7 @@ $$
 
 where $$\beta\ge 0$$ controls the accuracy/compression trade-off.
 
-This formulation was introduced specifically to repair a problem with applying the classical Information Bottleneck directly to chain-of-thought [[4]](#ref-4). In a transformer, the answer decoder sees both $$X$$ and $$Z$$; therefore the Markov assumption underlying the ordinary IB,
+This formulation was introduced specifically to repair a problem with applying the classical Information Bottleneck directly to chain-of-thought [[10]](#ref-10). In a transformer, the answer decoder sees both $$X$$ and $$Z$$; therefore the Markov assumption underlying the ordinary IB,
 
 
 $$
@@ -116,7 +116,7 @@ I(X;Z) =\mathbb E \big(\log\frac{\pi_{\theta}(Z|X)}{P(Z)}\big)
 
 $$
 
-Expectation is computed empirically using samples of $$(X,Z)$$, but it still requires knowledge of $$P(Z)$$. What is $$P(Z)$$ and why does it pop up in the expression? **The distribution $$P(Z)$$ is a prior over the space of reasoning traces.** Intuitively, the term $$P(Z)$$ is pushing the generated trace $$Z$$ toward the space of reasoning traces. In other words, **$$\log P(Z)$$ in the CIB bound rewards the use of *natural reasoning traces***. $$P(Z)$$ is unknown in general, but we can use any other approximate prior $$Q$$ (as in Alemi et al., 2017 [[3]](#ref-3)) and use this relation:
+Expectation is computed empirically using samples of $$(X,Z)$$, but it still requires knowledge of $$P(Z)$$. What is $$P(Z)$$ and why does it pop up in the expression? **The distribution $$P(Z)$$ is a prior over the space of reasoning traces.** Intuitively, the term $$P(Z)$$ is pushing the generated trace $$Z$$ toward the space of reasoning traces. In other words, **$$\log P(Z)$$ in the CIB bound rewards the use of *natural reasoning traces***. $$P(Z)$$ is unknown in general, but we can use any other approximate prior $$Q$$ (as in Alemi et al., 2017 [[11]](#ref-11)) and use this relation:
 
 $$
 
@@ -180,9 +180,52 @@ $$
 
 This is a typical entropy-regularized post-training objective with a particular $$S(x,z)$$, however, with an additional term $$\log Q(z)$$, which compresses the traces leveraging prior $$Q$$.
 
+## Compressing the reasoning trace
+
+different budget-forcing methods can be understood as different choices of prior over reasoning traces within the same Conditional Information Bottleneck (CIB) objective. The prior determines what kind of reasoning is considered expensive. 
+
+**Linear length penalties: uniform prior.** Suppose every token has equal probability:
+
+$$
+Q(z_t)=\frac{1}{|V|}.
+$$
+
+Then every token has the same information cost, regardless of its meaning:
+
+$$
+-\log Q(Z)=T\log |V|.
+$$
+
+Consequently, the CIB objective reduces to a conventional linear length penalty. The implicit assumption is that every additional token is equally expensive.
+
+**Target-length forcing: Laplace prior.** Consider methods such as LCPO-Exact, which encourage the generated reasoning length to match a target length $T^\star$. This corresponds to choosing a prior over sequence length:
+
+$$
+Q(T)\propto \exp(-|T-T^\star|).
+$$
+
+The resulting negative log-prior is $-\log Q(T)=|T-T^\star|+\text{constant}$.
+In other words, target-length forcing is a CIB objective with a prior that concentrates probability around a preferred reasoning length. It penalizes being too short as well as being too long.
+
+**Semantic compression: language-model prior.** We proposed to use a frozen pretrained language model as the prior:
+
+$$
+Q_\phi(Z)=
+\prod_{t=1}^{T}Q_\phi(z_t\mid z_{<t}).
+$$
+
+Its information cost is
+
+$$
+C(Z)=\sum_{t=1}^{T}
+-\log Q_\phi(z_t\mid z_{<t}).
+$$
+
+Now tokens are no longer equally expensive. Predictable, common tokens have low cost, while surprising tokens have higher cost. Crucially, this cost is balanced against the answer-accuracy reward. The model can therefore retain a costly but essential reasoning step when it helps produce the correct answer, while suppressing predictable, repetitive or redundant reasoning.
+
 ## Obtaining LLM post-training methods from CIB
 
-We introduce a small change in our bound, and use a conditional prior $$Q(z\mid x)$$ instead:
+Let's go back to our original curiosity about the similarity of post-training methods. We introduce a small change in our bound, and use a conditional prior $$Q(z\mid x)$$ instead:
 
 $$
 
@@ -202,11 +245,11 @@ $$
 
 We can now obtain many familiar methods from this bound.
 
-**RLVR [[5]](#ref-5):** We can select $$S(x,z)$$ equal to the verifier reward $$r_{\mathrm{VR}}(x,z)=\mathbf 1\{\widehat y(x,z)=y\}$$. $$\beta$$ controls whether we add budget forcing [[9]](#ref-9) or not. We typically sample on-policy from the model we optimize on.
+**RLVR [[1]](#ref-1):** We can select $$S(x,z)$$ equal to the verifier reward $$r_{\mathrm{VR}}(x,z)=\mathbf 1\{\widehat y(x,z)=y\}$$. $$\beta$$ controls whether we add budget forcing [[6]](#ref-6) or not. We typically sample on-policy from the model we optimize on.
 
-**RLAIF [[6]](#ref-6):** We can select $$S(x,z)$$ equal to the AI critic: $$r_{\mathrm{AI}}(x,z)$$. We typically sample on-policy from the model we optimize on.
+**RLAIF [[2]](#ref-2):** We can select $$S(x,z)$$ equal to the AI critic that score the final asnwer: $$r_{\mathrm{AI}}(\widehat y(x,z))$$. We typically sample on-policy from the model we optimize on.
 
-**OPD [[8]](#ref-8):** In OPD, the states are generated by the student, on-policy: $$z\sim\pi_\theta(\cdot\mid x).$$ A teacher provides a distribution $$q_T(z_t\mid x,z_{<t}).$$ A canonical token-level OPD objective is:
+**OPD [[3]](#ref-3):** In OPD, the states are generated by the student, on-policy: $$z\sim\pi_\theta(\cdot\mid x).$$ A teacher provides a distribution $$q_T(z_t\mid x,z_{<t}).$$ A canonical token-level OPD objective is:
 
 
 $$
@@ -313,55 +356,45 @@ $$
 
 Thus SFT is the **offline analogue** of distillation: the data distribution plays the role of the teacher.
 
+
+
 ## Final words
 
-The conditional information bottleneck framework provides a general way of thinking about post-training of reasoning models. It is flexible to the choice of the sampling distribution, which can change from one case to another, and it provides a playground for selecting prior $$Q$$ for controlling the minimality, and the term $$S(x,z)$$ for sufficiency. The choice of $$\beta$$ controls the compression rate, and we have shown in our experiments that the compression rate can be controlled smoothly with $$\beta$$ [[1]](#ref-1).
+The conditional information bottleneck framework provides a general way of thinking about post-training of reasoning models. It is flexible to the choice of the sampling distribution, which can change from one case to another, and it provides a playground for selecting prior $$Q$$ for controlling the minimality, and the term $$S(x,z)$$ for sufficiency. The choice of $$\beta$$ controls the compression rate, and we have shown in our experiments that the compression rate can be controlled smoothly with $$\beta$$ [[5]](#ref-5).
 
-RLVR, RLAIF, SFT, OPD, and indeed self-distillation [[7]](#ref-7) can all be represented within a generalized variational CIB framework, in which post-training specifies a sufficiency functional and an information reference, while on-policy versus offline training specifies the trajectory distribution on which the functional is evaluated.
+RLVR, RLAIF, SFT, OPD, and indeed self-distillation [[4]](#ref-4) can all be represented within a generalized variational CIB framework, in which post-training specifies a sufficiency functional and an information reference, while on-policy versus offline training specifies the trajectory distribution on which the functional is evaluated.
 
 ## References
 
-1. <a id="ref-1"></a>**Massoli, F. V., Kuzmin, A., & Behboodi, A.**  
-   *Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck.* NeurIPS 2026.  
-   arXiv:2603.08462, 2026.  
-   https://arxiv.org/abs/2603.08462
+1. <a id="ref-1"></a>**Shao, Z. et al.**<br>
+   [*DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.*](https://arxiv.org/abs/2402.03300) 2024.
 
-2. <a id="ref-2"></a>**Tishby, N., Pereira, F. C., & Bialek, W.**  
-   *The Information Bottleneck Method.* 1999.  
-   https://arxiv.org/abs/physics/0004057
+2. <a id="ref-2"></a>**Lee, H. et al.**<br>
+   [*RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback.*](https://arxiv.org/abs/2309.00267) 2023.
 
-3. <a id="ref-3"></a>**Alemi, A. A., Fischer, I., Dillon, J. V., & Murphy, K.**  
-   *Deep Variational Information Bottleneck.* ICLR 2017.  
-   https://arxiv.org/abs/1612.00410
+3. <a id="ref-3"></a>**Song, M. & Zheng, M.**<br>
+   [*A Survey of On-Policy Distillation for Large Language Models.*](https://arxiv.org/abs/2604.00626) 2026.
 
-4. <a id="ref-4"></a>**Wei, J. et al.**  
-   *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.* NeurIPS 2022.  
-   https://arxiv.org/abs/2201.11903
+4. <a id="ref-4"></a>**Zhao, S. et al.**<br>
+   [*Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models.*](https://arxiv.org/abs/2601.18734) ICML 2026.
 
-5. <a id="ref-5"></a>**Shao, Z. et al.**  
-   *DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.* 2024.  
-   https://arxiv.org/abs/2402.03300
+5. <a id="ref-5"></a>**Massoli, F. V., Kuzmin, A., & Behboodi, A.**<br>
+   [*Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck.*](https://arxiv.org/abs/2603.08462) NeurIPS 2026.
 
-6. <a id="ref-6"></a>**Lee, H. et al.**  
-   *RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback.* 2023.  
-   https://arxiv.org/abs/2309.00267
+6. <a id="ref-6"></a>**Aggarwal, P. & Welleck, S.**<br>
+   [*L1: Controlling How Long a Reasoning Model Thinks With Reinforcement Learning.*](https://arxiv.org/abs/2503.04697) 2025.
 
-7. <a id="ref-7"></a>**Zhao, S. et al.**  
-   *Self-Distilled Reasoner: On-Policy Self-Distillation for Large Language Models.* ICML 2026.  
-   https://arxiv.org/abs/2601.18734
+7. <a id="ref-7"></a>**Broome, J.**<br>
+   [*Normativity, Rationality, and Reasoning: Selected Essays.*](https://academic.oup.com/book/39193) Oxford University Press, 2021.
 
-8. <a id="ref-8"></a>**Song, M. & Zheng, M.**  
-   *A Survey of On-Policy Distillation for Large Language Models.* 2026.  
-   https://arxiv.org/abs/2604.00626
+8. <a id="ref-8"></a>**Tishby, N., Pereira, F. C., & Bialek, W.**<br>
+   [*The Information Bottleneck Method.*](https://arxiv.org/abs/physics/0004057) 1999.
 
-9. <a id="ref-9"></a>**Aggarwal, P. & Welleck, S.**  
-   *L1: Controlling How Long a Reasoning Model Thinks With Reinforcement Learning.* 2025.  
-   https://arxiv.org/abs/2503.04697
+9. <a id="ref-9"></a>**Shwartz-Ziv, R. & Tishby, N.**<br>
+   [*Opening the Black Box of Deep Neural Networks via Information.*](https://arxiv.org/abs/1703.00810) 2017.
 
-10. <a id="ref-10"></a>**Broome, J.**  
-    *Normativity, Rationality, and Reasoning: Selected Essays.* Oxford University Press, 2021.
+10. <a id="ref-10"></a>**Wei, J. et al.**<br>
+   [*Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.*](https://arxiv.org/abs/2201.11903) NeurIPS 2022.
 
-11. <a id="ref-11"></a>**Shwartz-Ziv, R. & Tishby, N.**  
-    *Opening the Black Box of Deep Neural Networks via Information.* 2017.  
-    https://arxiv.org/abs/1703.00810
-
+11. <a id="ref-11"></a>**Alemi, A. A., Fischer, I., Dillon, J. V., & Murphy, K.**<br>
+   [*Deep Variational Information Bottleneck.*](https://arxiv.org/abs/1612.00410) ICLR 2017.

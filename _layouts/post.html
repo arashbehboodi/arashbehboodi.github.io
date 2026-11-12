@@ -2,12 +2,25 @@
 layout: default
 ---
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-<article class="post">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta"><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
-  </header>
-  <div class="post-content">
-    {{ content }}
-  </div>
-</article>
+<script defer src="{{ '/src/post.js' | relative_url }}"></script>
+<div class="post-layout">
+  <aside class="post-sidebar post-sidebar-contents" aria-label="Table of contents" hidden>
+    <details class="post-toc">
+      <summary>Contents</summary>
+      <nav aria-label="Post sections"><ol class="post-toc-list"></ol></nav>
+    </details>
+  </aside>
+  <article class="post">
+    <header>
+      <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+      <h1>{{ page.title }}</h1>
+    </header>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+  <aside class="post-sidebar post-sidebar-references" aria-label="References" hidden>
+    <h2>References</h2>
+    <ol class="post-reference-list"></ol>
+  </aside>
+</div>
