@@ -42,8 +42,8 @@ description: Research, publications, and writing by Arash Behboodi.
 </section>
 
 <section class="section-card">
-  <h3 id="news-and-highlights">News and Highlights</h3>
-  <p class="section-intro">Recent papers, talks, and research updates.</p>
+  <h3 id="news-and-highlights">Recent News and Highlights</h3>
+  <p class="section-intro">Recent papers and research updates.</p>
   <ul class="feature-list">
     <li><p>
       New paper:
@@ -82,73 +82,27 @@ Enabling Dynamic Computation in Looped LMs</a>
   </li>
 
   <li>
-    <p>ACL Findings2026: <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents</a></p>
-  </li>
-  <li>
-    <p>See our NeurIPS 2025 expo demo on: <a href="https://qualcomm-ai-research.github.io/llm-reasoning-on-edge/">Efficient Reasoning on the Edge.</a></p>
+    <p>ACL Findings 2026: <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents</a></p>
   </li>
   <li>
     <p>New paper: <a href="https://arxiv.org/abs/2509.04631"> Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction</a></p>
   </li>
-  <li>
-    <p>I give a keynote talk about <strong>Information Theoretic Perspective on Conformal Prediction</strong> at 14th Symposium on Conformal and Probabilistic Prediction with Applications, <a href="https://copa-conference.com/">COPA 2025</a></p>
-  </li>
  </ul>
 </section>
 
 <section class="section-card">
-  <h3 id="recent-papers">Selected Recent Papers</h3>
-  <p class="section-intro">A quick tour through recent work across theory, reasoning, and simulation.</p>
-  <ul class="feature-list">
-    <li><p>
-      Tianyu Liu, Davide Belli, Bence Major, Arash Behboodi, Tribhuvanesh Orekondy
-      <a href="https://arxiv.org/abs/2610.19868">
-      Explorer-Zero: Improving Self-Play for Long-Horizon Tasks with Decomposable Verifiable Rewards
-    </a>, NeurIPS Workshop CL4FMAgents, 2026 </p></li>
-
-      <li>
-      <p>
-Aayush Mishra, Arnau Padrés Masdemont, Victor Conchello Vendrell, Jordi Ros Giralt, Arash Behboodi, Fabio Valerio Massoli, <a href="https://arxiv.org/abs/2610.09013"> Enabling Dynamic Computation in Looped LMs</a>, 2026
-      </p>
-    </li>
-
-    <li>
-    <p>Fabio Valerio Massoli, Andrey Kuzmin, Arash Behboodi, <a href="https://arxiv.org/abs/2603.08462">Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck</a>,  NeurIPS 2026</p>
-  </li>
-  <li>
-    <p>Corrado Rainone, Davide Belli, Bence Major, Arash Behboodi, <a href="https://arxiv.org/abs/2605.30102">
-    When Cloud Agents Meet Device Agents: Lessons from Hybrid Multi-Agent Systems</a>, 2026
-    </p>
-  </li>
-  <li>
-    <p>Victor Conchello Vendrell, Arnau Padres Masdemont, Niccolò Grillo, Jordi Ros-Giralt, Arash Behboodi, Fabio Valerio Massoli,
-      <a href="https://arxiv.org/abs/2605.07721">Memory-Efficient Looped Transformer: Decoupling Compute from Memory in Looped Language Models
-</a>, 2026</p>
-  </li>
-  <li>
-    <p>Yelysei Bondarenko et al., <a href="https://arxiv.org/abs/2603.16867">Efficient Reasoning on the Edge</a>, 2026</p>
-  </li>
-  <li>
-    <p>Gabriele Cesa, Thomas Hehn, Aleix Torres-Camps, Àlex Batlle Casellas, Jordi Ros-Giralt, Arash Behboodi, Tribhuvanesh Orekondy, <a href="https://arxiv.org/abs/2605.27570">LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation</a>,  2026</p>
-  </li>
-  <li>
-    <p>Amin Rakhsha, Thomas Hehn, Pietro Mazzaglia, Fabio Valerio Massoli, Arash Behboodi, Tribhuvanesh Orekondy, <a href="https://arxiv.org/abs/2601.16649">LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents</a>,  ACL Findings 2026</p>
-  </li>
-  <li>
-    <p>Arash Behboodi, Alvaro H.C. Correia, Fabio Valerio Massoli, Christos Louizos, <a href="https://arxiv.org/abs/2509.04631"> Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction</a>, 2025</p>
-  </li>
- </ul>
-</section>
-
-<section class="section-card">
-  <h3 id="misc">Misc.</h3>
-  <p class="section-intro">Workshops, conversations, and related projects.</p>
+  <h3 id="talks-and-writing">Talks and Writing</h3>
+  <p class="section-intro">Recent talks, blog posts, and activities.</p>
   <ul class="feature-list compact-list">
+  {% assign latest_post = site.posts | first %}
+  {% if latest_post %}
   <li>
-    <p>Workshop <a href="https://d3s3workshop.github.io/">D3S3: Data-driven and Differentiable Simulations, Surrogates, and Solvers</a> at NeurIPS 2024.</p>
+    <p>Latest blog post: <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title | escape }}</a>.</p>
   </li>
+  {% endif %}
   <li>
-    <p>My chat with Sam Charrington at TWIML AI podcast around <a href="https://twimlai.com/podcast/twimlai/ai-at-the-edge-qualcomm-ai-research-at-neurips-2024/">Differentiable Simulation, Conformal Prediction, and AI at the Edge</a>.</p>
+    <p>Keynote: <strong>Information Theoretic Perspective on Conformal Prediction</strong> at <a href="https://copa-conference.com/">COPA 2025</a>.</p>
   </li>
+  <li><p>Explore <a href="{{ '/highlights.html' | relative_url }}">past talks, workshops, and other highlights</a>.</p></li>
 </ul>
 </section>
